@@ -161,14 +161,14 @@ def convert_data_to_table_format():
 def stats_of_data():
     logger.info("stats")
 
-    # Your code here
-    # Load pandas DataFrame and print to stdout different statistics about the data.
-    # Try to think about the data and use not only describe and info.
-    # Ask yourself what would you like to know about this data (most frequent word, or something else)
+    # "Date" - рассматриваемый период (в формате YYYY-MM)
+    # "Total Crimes" - сколько всего преступлений попало в выборку
+    # "Crimes by category" - список преступлений по категориям отсортированный по количеству
+    # "Status on "Bicycle theft" crimes" - статистика по статусам по преступлениям о воровстве велосипедов
 
     file = pd.read_csv(TABLE_FORMAT_FILE, sep='\t')
     df = pd.DataFrame(file)
-    print('\n***Data:')
+    print('\n***Date:')
     print(df.loc[0]['month'])
 
     print('\n***Total Crimes:')
